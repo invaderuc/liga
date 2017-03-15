@@ -1,15 +1,17 @@
-<form action="<?php echo base_url(); ?>clogin/login" method="POST">
-	<div class="row">
-		<div class="large-5 columns">
-			<h2>Login</h2>
+<div class="col-lg-6">
+	<form action="<?php echo base_url(); ?>clogin/login" method="POST">
+		<h2 class="text-muted">Logín</h2>
+		<br>
+	  	<div class="form-group row">
+			<span class="col-2 col-form-label">Clave</span>
+		  	<input name="usuario" type="text" class="form-control col-10">
+		</div>
+		
+		<div class="form-group row">
+			<span class="col-2 col-form-label">Correo</span>
+		  	<input name="password" type="password" class="form-control col-10">
+		</div>
 
-			<label for="usuario">Usuario</label>
-		  	<input id="usuario" name="usuario" type="text" class="validate">
-      
-	      	<label for="password">Password</label>
-		  	<input id="password" name="password" type="password" class="validate">
-
-	        <input class="button" type="submit" value="Ingresar">
-	    </div>
-    </div>  
-</form>
+        <br><input class="btn btn-primary" type="submit" value="Ingresar"><br><br>	
+	</form>
+</div>

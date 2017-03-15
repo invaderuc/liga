@@ -1,5 +1,6 @@
-<div class="row">
-  <table>
+<div class="col-lg-12">
+  <p><a class="btn btn btn-success" href="<?php echo base_url(); ?>cpersona/add" role="button">Agregar Personas</a></p>
+  <table class="table">
     <thead>
       <tr>
         <th>ID</th>
@@ -16,7 +17,13 @@
           <td> <?php echo $row->PER_NOMBRE; ?></td>
           <td> <?php echo $row->PER_CORREO; ?></td>
           <td> <?php echo $row->PER_REGISTRO; ?></td>
-          <td> </td>  
+          <td>  
+            
+              <a class="link" href="<?php echo base_url(); ?>">Ver</a> 
+              <a class="link" href="<?php echo base_url(); ?>">Editar</a> 
+              <a class="link" href="<?php echo base_url(); ?>">Eliminar</a> 
+            
+          </td>  
         </tr>  
       <?php } ?>
     </tbody>
