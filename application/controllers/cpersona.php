@@ -19,6 +19,15 @@
 			$this->load->view('persona/vaddpersona');
 			$this->load->view('footer');
 		}
+		public function view(){
+			$id = $this->input->get("id");
+			$data = $this->mpersona->buscar($id);
+			
+			$this->load->view('head');
+			$this->load->view('persona/vviewpersona',$data);
+			$this->load->view('footer');
+
+		}
 		public function guardar(){
 			$param['nombre'] = $this->input->post("nombre");
 			$param['correo'] = $this->input->post("correo");

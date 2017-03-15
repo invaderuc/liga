@@ -13,6 +13,17 @@
 			);
 			$this->db->insert('personas',$campos);
 		}
+		public function buscar($id){
+			$query = $this->db->query("SELECT * FROM personas WHERE PER_ID = $id;");
+			$row = $query->row();
+			$data = array(
+				'id'=>$row->PER_ID,
+				'nombre'=>$row->PER_NOMBRE,
+				'registro'=>$row->PER_REGISTRO,
+				'clave'=>$row->PER_CLAVE,
+				);
+			return($data);
+		}
 		public function personas_listar(){
 			$query = $this->db->query("SELECT * FROM personas;");
 
