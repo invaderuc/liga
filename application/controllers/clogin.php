@@ -21,6 +21,8 @@
 				$this->load->view('footer');
 			}
 			else{
+				$this->load->view('head');
+				$this->load->view('index');
 				$this->load->view('footer');
 			}
 		}

@@ -22,8 +22,8 @@
 		public function view(){
 			$id = $this->input->get("id");
 			$data = $this->mpersona->buscar($id);
-			
-			$this->load->view('head');
+			$titulo['title'] = $data['nombre'];//titulo head
+			$this->load->view('head',$titulo);
 			$this->load->view('persona/vviewpersona',$data);
 			$this->load->view('footer');
 

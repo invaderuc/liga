@@ -10,7 +10,7 @@
 			#$this->db->where("p.per_correo",$usuario);
 			#$this->db->where("p.per_clave",$password);
 
-			$resultado = $this->db->query("SELECT * FROM PERSONAS WHERE PER_CORREO = $usuario AND PER_CLAVE AND $password");
+			$resultado = $this->db->query("SELECT * FROM PERSONAS WHERE PER_CORREO = '$usuario' AND PER_CLAVE = '$password'");
 			
 			if ($resultado->num_rows() == 1) {
 				$r = $resultado->row();
