@@ -4,7 +4,8 @@
 			parent::__construct();
 		}
 		public function index(){
-			$this->load->view('head');
+			$titulo['title'] = "Ligas Observer";
+			$this->load->view('head',$titulo);
 			$this->load->view('index');
 			$this->load->view('footer');
 		}

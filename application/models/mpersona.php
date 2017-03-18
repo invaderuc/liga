@@ -20,6 +20,7 @@
 				'id'=>$row->PER_ID,
 				'nombre'=>$row->PER_NOMBRE,
 				'registro'=>$row->PER_REGISTRO,
+				'correo'=>$row->PER_CORREO,
 				'clave'=>$row->PER_CLAVE,
 				);
 			return($data);
@@ -31,6 +32,21 @@
 			if ($query->num_rows() >0) {
 				return $query;
 			}
+		}
+		public function actualizar($param){
+			$campos = array(
+				'PER_NOMBRE' => $param['nombre'],
+				'PER_CORREO' => $param['correo'],
+				'PER_CLAVE' => $param['clave'],
+				'PER_ID' => $param['id'],
+			);
+
+			$this->db->where('PER_ID', $campos['PER_ID']);
+			$this->db->update('personas', $campos);
+		}
+		public function eliminar($id){
+			$this->db->where('PER_ID', $id);
+			$this->db->delete('personas');
 		}
 	}
 ?>

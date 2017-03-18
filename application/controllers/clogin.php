@@ -21,8 +21,9 @@
 				$this->load->view('footer');
 			}
 			else{
+				$data["mensaje"] = "Error al iniciar sesión";
 				$this->load->view('head');
-				$this->load->view('index');
+				$this->load->view('login',$data);
 				$this->load->view('footer');
 			}
 		}

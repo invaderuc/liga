@@ -18,11 +18,9 @@
           <td> <?php echo $row->PER_CORREO; ?></td>
           <td> <?php echo $row->PER_REGISTRO; ?></td>
           <td>  
-            
               <a class="link" href="<?php echo base_url(); ?>cpersona/view?id=<?php echo $row->PER_ID; ?>">Ver</a> 
-              <a class="link" href="<?php echo base_url(); ?>">Editar</a> 
-              <a class="link" href="<?php echo base_url(); ?>">Eliminar</a> 
-            
+              <a class="link" href="<?php echo base_url(); ?>cpersona/update?id=<?php echo $row->PER_ID; ?>">Editar</a> 
+              <a class="link" href="<?php echo base_url(); ?>cpersona/delete?id=<?php echo $row->PER_ID; ?>">Eliminar</a> 
           </td>  
         </tr>  
       <?php } ?>
